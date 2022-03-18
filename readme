@@ -1,0 +1,26 @@
+Enum
+
+StatusDespesa:
+    LIQUIDADA,
+    PENDENTE
+
+Classes
+
+* Entrada:
+    Long id
+    String descricao
+    BigDecimal valor
+
+* Despesa(estende Entrada):
+    Boolean recorrencia
+    LocalDate dataVencimento
+    StatusDespesa statusDespesa
+
+* Renda:
+    LocalDate dataRecebimento
+
+* BalancoMensal:
+    Long id
+    LocalDate mesReferencia
+    List<Despesa> despesas;
+    List<Renda> rendas;
